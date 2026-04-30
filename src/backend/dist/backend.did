@@ -1,0 +1,58 @@
+type SearchResult = 
+ record {
+   colleges: vec CollegeRecord;
+   totalCount: nat;
+ };
+type SearchFilter = 
+ record {
+   location: opt text;
+   maxFees: opt nat;
+   minFees: opt nat;
+   nameQuery: opt text;
+   page: nat;
+   pageSize: nat;
+ };
+type PredictorQuery = 
+ record {
+   examType: text;
+   rank: nat;
+ };
+type CutoffRecord = 
+ record {
+   category: text;
+   examType: text;
+   rank: nat;
+ };
+type CourseRecord = 
+ record {
+   durationYears: nat;
+   name: text;
+   seats: nat;
+ };
+type CollegeRecord = 
+ record {
+   accreditation: text;
+   annualFees: nat;
+   avgPackageLPA: float64;
+   courses: vec CourseRecord;
+   cutoffs: vec CutoffRecord;
+   description: text;
+   establishedYear: nat;
+   id: CollegeId;
+   location: text;
+   name: text;
+   placementPercent: nat;
+   rating: float64;
+   state: text;
+   topRecruiters: vec text;
+   totalStudents: nat;
+ };
+type CollegeId = text;
+service : {
+  getAllLocations: () -> (vec text) query;
+  getCollege: (id: CollegeId) -> (opt CollegeRecord) query;
+  getColleges: (filter: SearchFilter) -> (SearchResult) query;
+  getCollegesById: (ids: vec CollegeId) -> (vec CollegeRecord) query;
+  initializeData: () -> ();
+  predictColleges: (predictor: PredictorQuery) -> (vec CollegeRecord) query;
+}

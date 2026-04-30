@@ -1,0 +1,33 @@
+// Version: 1.0.0
+type CollegeId__344024654 = Text;
+type CollegeRecord__275111933 =
+  {
+    accreditation : Text;
+    annualFees : Nat;
+    avgPackageLPA : Float;
+    courses : [CourseRecord__803896268];
+    cutoffs : [CutoffRecord__704342699];
+    description : Text;
+    establishedYear : Nat;
+    id : CollegeId__344024654;
+    location : Text;
+    name : Text;
+    placementPercent : Nat;
+    rating : Float;
+    state : Text;
+    topRecruiters : [Text];
+    totalStudents : Nat
+  };
+type CourseRecord__803896268 =
+  {durationYears : Nat; name : Text; seats : Nat};
+type CutoffRecord__704342699 = {category : Text; examType : Text; rank : Nat};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+actor {
+  stable colleges :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?CollegeRecord__275111933]];
+      var elementIndex : Nat__490723111
+    }
+};

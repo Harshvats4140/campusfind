@@ -1,0 +1,21 @@
+{
+  "overview": "A production-grade college discovery and decision platform. Search and browse Indian colleges, explore detailed profiles with placement stats and courses, compare colleges side-by-side, and use the predictor tool to find colleges matching your entrance exam rank.",
+  "features": [
+    "College listing with search and filters by location and fee range",
+    "Detailed college profiles with courses, placements, and reviews",
+    "Side-by-side college comparison table (up to 3 colleges)",
+    "College predictor tool based on exam type and rank (JEE Main, JEE Advanced, NEET)",
+    "Fully responsive design for mobile and desktop"
+  ],
+  "category": "education",
+  "tags": [
+    "college",
+    "education",
+    "india",
+    "admission",
+    "comparison",
+    "predictor",
+    "discovery"
+  ],
+  "last_updated": "2026-04-30T09:00:23.981Z"
+}
