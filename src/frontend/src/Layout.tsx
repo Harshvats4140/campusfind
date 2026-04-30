@@ -152,14 +152,7 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <span>
               © {new Date().getFullYear()} CampusFind. Built by Harshvardhan
-              <a
-                href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
-                className="text-primary hover:underline font-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                caffeine.ai
-              </a>
+          
             </span>
           </div>
           <div className="flex items-center gap-4 text-xs">
