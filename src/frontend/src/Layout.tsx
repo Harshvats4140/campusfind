@@ -151,7 +151,7 @@ export default function Layout({ children }: LayoutProps) {
               <GraduationCap className="h-3.5 w-3.5 text-primary" />
             </div>
             <span>
-              © {new Date().getFullYear()} CampusFind. Built with love using{" "}
+              © {new Date().getFullYear()} CampusFind. Built by Harshvardhan
               <a
                 href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
                 className="text-primary hover:underline font-medium"
